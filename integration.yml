@@ -1,0 +1,14 @@
+name: Integration
+
+on:
+	pull_request: [ "main" ]
+jobs:
+	build:
+		runs-on: ubuntu-latest
+		steps:
+			-name: Run hello world
+			 run: echo Hello Jasser
+			-run: npm install
+			-run: npm test
+			-run: npm build
+			-run: npm deploy
