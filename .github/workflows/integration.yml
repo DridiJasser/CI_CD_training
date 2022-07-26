@@ -28,11 +28,5 @@ jobs :
   runs-on : ubuntu-latest
   steps:
    - name: Delete multiple branches
-  # You may pin to the exact commit or the version.
-  # uses: dawidd6/action-delete-branch@d1efac9a6f7a9b408d4e8ff663a99c1fbac17b3f
     uses: dawidd6/action-delete-branch@v3.1.0
-     with:
-      branches:
-       numbers:
-        -2
-       prefix: f
+     
