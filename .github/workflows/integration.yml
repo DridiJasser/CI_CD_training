@@ -12,9 +12,6 @@ jobs :
     - uses: actions/setup-node@v3
       with:
        node-version: 16
-    - run: npm i
-    - run: npm test
-    - run : npm build
     - run : echo builded successfully
 ---
 name: Integration
@@ -28,5 +25,4 @@ jobs :
   runs-on : ubuntu-latest
   steps:
    - name: Delete multiple branches
-    uses: dawidd6/action-delete-branch@v3.1.0
      
