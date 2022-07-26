@@ -12,14 +12,18 @@ jobs :
     - uses: actions/setup-node@v3
       with:
        node-version: 16
-    - run: npm i
-    - run : ng serve
     - run : echo builded successfully
- delete_branch :
+
+---
+name: Integrationv2
+on:
+  push : 
+   branches : 
+    - main
+jobs :
+  delete_branch :
   runs-on: ubuntu-latest
   steps:
   - uses: dawidd6/action-delete-branch@v3
     name: Delete pr-* branches 
-
-  
 
